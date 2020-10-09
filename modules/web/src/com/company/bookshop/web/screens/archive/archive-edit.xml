@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://archiveEdit.caption"
+        focusComponent="form"
+        messagesPack="com.company.bookshop.web.screens.archive">
+    <data>
+        <instance id="archiveDc"
+                  class="com.company.bookshop.entity.Archive">
+            <view extends="_local"/>
+            <loader/>
+        </instance>
+    </data>
+    <dialogMode height="500"
+                width="500"/>
+    <layout expand="editActions" spacing="true">
+        <form id="form" dataContainer="archiveDc">
+            <column width="350px">
+                <textField id="authorField" property="author"/>
+                <textField id="booknameField" property="bookname"/>
+                <textField id="yearField" property="year"/>
+            </column>
+        </form>
+        <form/>
+        <textField id="textField"
+                   caption="Title"
+                   width="100%"/>
+        <checkBox caption="Is reference document"
+                  width="100%"/>
+        <upload id="upload"
+                dropZone="dropZone"
+                showClearButton="true"
+                showFileName="true"/>
+        <vbox id="dropZone"
+              height="150px"
+              spacing="true"
+              stylename="dropZone-container">
+            <label stylename="dropZone-description"
+                   value="Drop file here"
+                   align="MIDDLE_CENTER"/>
+        </vbox>
+        <hbox id="editActions" spacing="true">
+            <button action="windowCommitAndClose"/>
+            <button action="windowClose"/>
+        </hbox>
+    </layout>
+</window>

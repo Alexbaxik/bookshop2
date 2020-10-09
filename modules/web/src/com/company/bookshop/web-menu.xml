@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<menu-config xmlns="http://schemas.haulmont.com/cuba/menu.xsd">
+    <menu id="application-bookshop" insertBefore="administration" caption="mainMsg://menu_config.application-bookshop">
+        <item screen="bookshop_Archive.browse" caption="mainMsg://menu_config.bookshop_Archive.browse"/>
+        <item screen="bookshop_" caption="mainMsg://menu_config.bookshop_"/>
+        <item screen="bookshop_Archive.browse2" caption="mainMsg://menu_config.bookshop_Archive.browse2"/>
+    </menu>
+</menu-config>
